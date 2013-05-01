@@ -25,11 +25,10 @@
     <a href='/profile/<%=current_user.id%>'>
     <a href='/logout'>Click here to logout!</a>
   <% else %>
-    <a href="/login">Click here to login</a>
-    <a href="/signup">Click here to signup</a>
+    <div class="header_buttons" id="login"><a href="/login">Click here to login</a></div>
+    <div class="header_buttons" id="signup"><a href="/signup">Click here to signup</a></div>
   <% end %>
-  <a href="/post/new">Submit a new post!</a>
-
+  <div class="header_buttons" id="submit"><a href="/post/new">Submit a new post!</a></div>
   </header>
   <%= yield %>
 </body>

@@ -2,16 +2,51 @@
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  border: 1px solid black;
 }
 th {
   text-align: left;
 }
 
-header {
-  background-color: #56A9D6;
+body {
+  background-color: gray;
 }
 
-header h3 a {
-  
+header {
+  background-color: #56A9D6;
+  width: 100%;
+  position: relative;
+  top: 15px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+header h3 a:link {
+text-decoration: none;  
+color: black;
+}
+
+header h3 a:hover {
+color: #E4EFF5;  
+}
+
+header h3 a:visited {
+color: ##56A9D6;  
+}
+
+.header_buttons {
+   display:inline;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: green;
+  opacity: .8;
+  margin-right: 5px;
+}
+.header_buttons:hover {
+ opacity: 1;
+}
+.header_buttons a {
+  text-decoration: none;
+  color: black;
 }
