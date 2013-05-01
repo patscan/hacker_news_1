@@ -1,0 +1,17 @@
+<div class="container">
+
+  <h2>Post</h2>
+
+    Post title: <%= @post.title %></a><br/>
+    Post id: <%= @post.id %><br/>
+    Post content: <%= @post.content%><br/>
+    Created at:<%= @post.created_at%><br/>
+
+  <h2>Comments</h2>
+  <% @post.comments.each do |comment| %>
+    <%= Post.find(comment.post_id).title%><br/>
+    <%= comment.content%><br/>
+    <%= comment.created_at%><br/>
+  <% end %>
+
+</div>

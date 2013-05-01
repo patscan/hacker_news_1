@@ -1,0 +1,8 @@
+<%= @user.username %>
+
+<h2>Comments</h2>
+<% @user.comments.each do |comment| %>
+  <%= Post.find(comment.post_id).title%><br/>
+  <%= comment.content%><br/>
+  <%= comment.created_at%><br/>
+<% end %>
