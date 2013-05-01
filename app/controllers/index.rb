@@ -48,9 +48,14 @@ get "/post/new" do
 end
 
 post "/post/new" do
-  post = Post.create(title: params["title"], content: params["content"])
-  current_user.posts << post
-  redirect "/profile/#{current_user.id}"
+  if current_user
+    post = Post.create(title: params["title"], content: params["content"])
+    current_user.posts << post
+    redirect "/profile/#{current_user.id}"
+  else
+    @you_fucked_up = true
+    erb :index
+  end
 end
 
 get '/post/:id' do
@@ -63,6 +68,10 @@ get '/user/:id/comments' do
   erb :user_comments
 end
 
+get '/logout' do
+  session.clear
+  redirect '/post/all'
+end
 
 
 

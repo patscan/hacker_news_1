@@ -20,9 +20,14 @@
 <body>
   <header>
   
-  S l 4 C k 3 |2 News
-  <a href="/login">Click here to login</a>
-  <a href="/signup">Click here to signup</a>  
+  <h3><a href='/post/all'>S l 4 C k 3 |2 News</a></h3>
+  <% if current_user %>
+    <a href='/profile/<%=current_user.id%>'>
+    <a href='/logout'>Click here to logout!</a>
+  <% else %>
+    <a href="/login">Click here to login</a>
+    <a href="/signup">Click here to signup</a>
+  <% end %>
   <a href="/post/new">Submit a new post!</a>
 
   </header>
